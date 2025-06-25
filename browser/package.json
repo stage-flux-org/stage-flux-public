@@ -1,0 +1,38 @@
+{
+  "name": "@stage-flux/browser",
+  "version": "1.0.0",
+  "description": "Browser API for StageFlux",
+  "scripts": {
+    "build": "npm run clean && npm run build:compile && npm run build:copyFiles",
+    "clean": "rm -rf dist",
+    "build:copyFiles": "cp ./{LICENSE,README.md,package.json,package-lock.json} ./dist/",
+    "build:compile": "npx tsc",
+    "watch": "npx tsc -w",
+    "release": "cd ./dist && npm publish --access=public && cd .."
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stage-flux-org/stage-flux-public"
+  },
+  "keywords": [
+    "stageflux",
+    "stage",
+    "flux",
+    "browser"
+  ],
+  "author": "StageFlux <info@stageflux.com>",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/stage-flux-org/stage-flux-public/blob/main/browser/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/stage-flux-org/stage-flux-public/issues"
+  },
+  "homepage": "https://github.com/stage-flux-org/stage-flux-public/blob/main/browser/README.md"
+}
